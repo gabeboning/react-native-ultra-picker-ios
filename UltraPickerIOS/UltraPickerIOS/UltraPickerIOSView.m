@@ -18,7 +18,9 @@
 {
     if (componentsData != _componentsData) {
         _componentsData = [componentsData copy];
-        [self setSelectedIndexes:_selectedIndexes];
+        if (_selectedIndexes != nil) {
+          [self setSelectedIndexes:_selectedIndexes];
+        }
         [self setNeedsLayout];
     }
 }
@@ -69,7 +71,7 @@
                             @"newValue": [self valueForRow:row forComponent:component],
                             @"newLabel": [self labelForRow:row forComponent:component]
                             };
-    
+
     if (self.onChange) {
         self.onChange(event);
     }
