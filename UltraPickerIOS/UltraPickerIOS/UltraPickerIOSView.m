@@ -69,7 +69,7 @@
                             @"newValue": [self valueForRow:row forComponent:component],
                             @"newLabel": [self labelForRow:row forComponent:component]
                             };
-    
+
     if (self.onChange) {
         self.onChange(event);
     }
