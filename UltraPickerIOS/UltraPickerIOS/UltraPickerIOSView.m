@@ -18,6 +18,7 @@
 {
     if (componentsData != _componentsData) {
         _componentsData = [componentsData copy];
+        [self setSelectedIndexes:_selectedIndexes];
         [self setNeedsLayout];
     }
 }
